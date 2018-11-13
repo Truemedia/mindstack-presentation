@@ -148,29 +148,44 @@ layout: layout.hbs
       <h1>Architecture</h1>
       <dl>
         <dt>Utterances</dt>
-        <dd>Phrases/sentences to match user speech to an intent</dd>
+        <dd>
+          <span class="key-detail">Phrases/sentences</span> to match user speech to an intent
+        </dd>
         <dt>Intent</dt>
-        <dd>A predefined action that the bot can respond to (using utterance)</dd>
+        <dd>A <span class="key-detail">predefined action name</span> that the bot can act on (associated to utterance)</dd>
         <dt>Slot</dt>
-        <dd>A dynamic piece of information derived inside an utterance</dd>
+        <dd>An extract of <span class="key-detail">santised information</span> derived inside an utterance</dd>
         <dt>Lexicon</dt>
-        <dd>Dictionary of words/phrases corresponding to meaning such a noun, verb, synonym etc</dd>
+        <dd>Dictionary of <span class="key-detail">words/phrases</span> corresponding to meaning such a noun, verb, synonym, word groupings, etc</dd>
         <dt>Resolvers</dt>
-        <dd>Functions executed when an intent/intents have been recognised</dd>
+        <dd>
+          <span class="key-detail">Function/s</span> executed when an intent/intents have been recognised
+        </dd>
         <dt>Templates</dt>
-        <dd>SSML, MD, HTML, Text files used for templating content in responses</dd>
+        <dd>SSML, MD, HTML, Text files used for <span class="key-detail">templating</span> content in responses</dd>
         <dt>Adapters</dt>
-        <dd>Object used to integrate bot into specific service/network (discord, alexa, etc)</dd>
+        <dd>
+          Object used to <span class="key-detail">integrate bot into specific service/network</span>
+          (eg <span class="service service--discord">Discord</span> <span class="service service--alexa">Alexa</span> <span class="service service--slack">Slack</span>)
+        </dd>
         <dt>Skillsets</dt>
-        <dd>Skills to give your bot functionality</dd>
+        <dd>
+          Skills to give your bot <span class="key-detail">interactive functionality</span>
+        </dd>
         <dt>Persona</dt>
-        <dd>Object to dictate the personality of a bot, using descriptive parameters</dd>
+        <dd>Object to dictate the <span class="key-detail">personality</span> of a bot, using descriptive parameters</dd>
         <dt>Data services</dt>
-        <dd>External services for providing data and resources inside intent handlers</dd>
+        <dd>
+          External services for providing <span class="key-detail">data and resources</span> inside intent handlers
+        </dd>
         <dt>POD service</dt>
-        <dd>Personal online datastore, A centralised service for grabbing personal details of someone from a shared datastore.</dd>
+        <dd>
+          Personal online datastore, A centralised service for grabbing <span class="key-detail">personal details</span> of someone from a shared datastore.
+        </dd>
         <dt>Env file</dt>
-        <dd>Set credentials/environment variables for adapters, data services, and pod services</dd>
+        <dd>
+          Set <span class="key-detail">credentials/environment variables</span> for adapters, data services, and pod services
+        </dd>
     </section>
     <!-- Adapters -->
     <section id="adapters">
@@ -303,5 +318,5 @@ layout: layout.hbs
 <script src="js/reveal.js"></script>
 <script>
   Reveal.initialize();
-  Reveal.slide(5);
+  Reveal.slide(6);
 </script>

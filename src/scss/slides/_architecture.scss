@@ -1,5 +1,9 @@
 #architecture {
   dl {
+    dt {
+      color: orange;
+      text-decoration: underline;
+    }
     dt, dd {
       font-size: $font-mc;
     }
