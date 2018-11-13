@@ -1,0 +1,307 @@
+---
+layout: layout.hbs
+---
+<div class="reveal">
+  <div class="slides">
+    <!-- Intro -->
+    <section id="intro">
+      <h2 class="slogan">A bot framework for digital assistants and chatbots</h2>
+      <h3 class="author">Wade Penistone</h3>
+      <p>
+        <span class="job-title">PHP developer</span> (technically full stack) at <br /><b>Tribus Digital</b>
+      </p>
+      <h3 class="project">
+        Project: <span class="project__name">Lowbot</span>
+      </h3>
+      <p>
+        A low implementation bot framework for building bots without restrictions
+      </p>
+    </section>
+    <!-- Stats voice -->
+    <section id="stats_voice">
+      <h2>Why use/build</h2>
+      <h3>for voice assistants/smart speakers</h3>
+      <ul class="studies">
+        <li>
+          <b>2017 study</b>
+           -
+          <span>
+            <span class="stat stat--pos">50%</span> of all searches will be <span class="key-detail">voice searches</span> by 2020
+          </span>
+          <a href="#" class="study__source">(source: comScore)</a>
+        </li>
+        <li>
+          <b>2017 study</b>
+           -
+          <span>
+            <span class="stat stat--pos">1 in 10</span> Brits <span class="key-detail">owns a smart speaker</span>, which works out to about <br /><span class="stat stat--pos">6.6 million</span> people
+          </span>
+          <a href="#" class="study__source">(source: YouGov)</a>
+        </li>
+        <li>
+          <b>2017 study</b>
+           -
+          <span>
+            Discovered that most smart speakers are located in either the <span class="key-detail">living room</span> <span class="stat stat--pos">61%</span> of respondents, the <span class="key-detail">bedroom</span> <span class="stat stat--mid">46%</span> or the <span class="key-detail">kitchen</span> <span class="stat stat--mid">46%</span>
+          </span>
+          <a href="#" class="study__source">(source: IFTTT)</a>
+        </li>
+        <li>
+          <b>2017 study</b>
+           -
+          <span>
+            <span class="key-detail">Inquiries and information gathering</span> are the second-most popular use for smart speakers (reported by <span class="stat stat--mid">42%</span> of smart speaker owners), behind playing music (reported by <span class="stat stat--pos">82%</span>)
+          </span>
+          <a href="#" class="study__source">(source: Captech)</a>
+        </li>
+      </ul>
+    </section>
+    <!-- Stats chat -->
+    <section id="stats_chat">
+      <h2>Why use/build</h2>
+      <h3>chatbots/AI tools</h3>
+      <ul class="studies">
+        <li>
+          <b>2017 study</b>
+           -
+          Only <span class="stat stat--neg">15%</span> of enterprises are <span class="key-detail">using AI</span> as of today, but <span class="stat stat--mid">31%</span> are expected to add it over the coming 12 months <a href="#" class="study__source">(source: Adobe)</a>
+        </li>
+        <li>
+          <b>2017 study</b>
+           -
+          The next big marketing trend is seen as being <span class="key-detail">consumer personalization</span> <span class="stat stat--pos">29%</span>, followed by <span class="key-detail">AI</span> <span class="stat stat--mid">26%</span> <a href="#" class="study__source">(source: BridghtEdge)</a>
+        </li>
+        <li>
+          <b>2017 study</b>
+           -
+          The three most in-demand skills are <span class="key-detail">machine learning</span>, <span class="key-detail">deep learning</span> and <span class="key-detail">natural language processing</span> <a href="#" class="study__source">(source: Monster.com)</a>
+        </li>
+        <li>
+          <b>2018 study</b>
+           -
+          <span class="key-detail">Global spending on AI</span> will grow to <span class="stat stat--pos">$7.3 billion</span> a year by 2022, up from <span class="stat stat--mid">$2 billion</span> in 2018. This is because companies will invest heavily in AI tools that will help them differentiate and improve the services they offer customers <a href="#" class="study__source">(source: Juniper Research)</a>
+        </li>
+      </ul>
+    </section>
+    <!-- Comparison -->
+    <section id="comparison">
+      <h1>Comparison</h1>
+      <p>
+        <a href="#">Link to spreadsheet compiled by third party</a>
+      </p>
+    </section>
+    <!-- Cons -->
+    <section id="cons">
+      <h2>Why is a <span class="key-detail">new</span> framework solution needed?</h2>
+      <dl>
+        <dt>MARKUP</dt>
+        <dd>
+          Speech assistants like <span class="service service--alexa">Alexa</span> use <span class="key-detail">SSML</span> with some custom tags where as text chat services like <span class="service service--slack">Slack</span> use custom <span class="key-detail">markdown</span>. There isn't any library currently to write a template that works for all and very few bot frameworks use templating libraries.
+        </dd>
+        <dt>SERVICE API'S</dt>
+        <dd>
+          There is <span class="key-issue">no consolidated API</span> for the services I want to use. Why write code more than once when it's doing the same thing on a different services?
+        </dd>
+        <dt>UNINTELLIGENT</dt>
+        <dd>
+          Most chat bot architectures are still using conventions which are <span class="key-issue">outdated and clunky</span>, where as people want <span class="key-detail">natural conversations</span> with smart AI. Even voice assistants are lacking in terms of the leg work needed to recognise a wide spectrum of conversation scenarios which people would want to essentially to perform the same task.
+        </dd>
+        <dt>LACK OF PERSONALITY</dt>
+        <dd>
+          It's nice to have a conversation with something that seems somewhat <span class="key-detail">intelligent</span> and has a <span class="key-detail">personality</span> you can connect with on a personal level. <span class="key-issue">Generic and stale language</span> can make the experience boring and feel like a chore more than a nice thing to have.
+        </dd>
+        <dt>STRUCTURE</dt>
+        <dd>
+          Most framework or api options leave very little in terms of ideas on how to structure your application. <span class="key-issue">Improvising</span> in this area can be daunting and quickly come back to bite you if you opt for the wrong strategy which essentially becomes a game of luckily fishing for useful libraries to get one thing done in the only way you can think how.
+        </dd>
+        <dt>AMOUNT OF CODE</dt>
+        <dd>
+          To make any kind of skill with a reasonable amount of functionality and great user experience for multiple api's without a framework would be a massively daunting and time consuming experience. Why would you want that when <span class="key-detail">boilerplate</span> can save you from <span class="key-issue">spaghetti code</span> and hours of your life back?
+        </dd>
+      </dl>
+    </section>
+    <!-- Solution -->
+    <section id="solution">
+      <h2>Solution?</h2>
+      <h3>New bot framework</h3>
+      <h4>Lowbot: low implementation bot</h4>
+      <div class="qr"></div>
+      <a href="https://github.com/Truemedia/lowbot">
+        https://github.com/Truemedia/lowbot
+      </a>
+      <br /><br />
+      <ul>
+        <li>Project was started on October 14th 2018 (<span class="key-detail">Just 2 months ago</span>)</li>
+        <li>
+          <span class="stat stat--pos">< 13kb</span> in size when installed
+        </li>
+        <li>Can build a bot in <span class="stat stat--pos">< 20</span> lines of code (*.js)</li>
+        <li>Example code, adapters, and skills easy to find and add</li>
+        <li>
+          <span class="key-detail">Generator/s</span> available</li>
+        <li>
+          <span class="key-detail">Tests</span> fully implemented</li>
+      </ul>
+    </section>
+    <!-- Architecture -->
+    <section id="architecture">
+      <h1>Architecture</h1>
+      <dl>
+        <dt>Utterances</dt>
+        <dd>Phrases/sentences to match user speech to an intent</dd>
+        <dt>Intent</dt>
+        <dd>A predefined action that the bot can respond to (using utterance)</dd>
+        <dt>Slot</dt>
+        <dd>A dynamic piece of information derived inside an utterance</dd>
+        <dt>Lexicon</dt>
+        <dd>Dictionary of words/phrases corresponding to meaning such a noun, verb, synonym etc</dd>
+        <dt>Resolvers</dt>
+        <dd>Functions executed when an intent/intents have been recognised</dd>
+        <dt>Templates</dt>
+        <dd>SSML, MD, HTML, Text files used for templating content in responses</dd>
+        <dt>Adapters</dt>
+        <dd>Object used to integrate bot into specific service/network (discord, alexa, etc)</dd>
+        <dt>Skillsets</dt>
+        <dd>Skills to give your bot functionality</dd>
+        <dt>Persona</dt>
+        <dd>Object to dictate the personality of a bot, using descriptive parameters</dd>
+        <dt>Data services</dt>
+        <dd>External services for providing data and resources inside intent handlers</dd>
+        <dt>POD service</dt>
+        <dd>Personal online datastore, A centralised service for grabbing personal details of someone from a shared datastore.</dd>
+        <dt>Env file</dt>
+        <dd>Set credentials/environment variables for adapters, data services, and pod services</dd>
+    </section>
+    <!-- Adapters -->
+    <section id="adapters">
+      <h1>Adapters</h1>
+      <p>
+        Adapters allow you to connect your bot to different services as a messaging/voice medium.
+      </p>
+      <p class="adapters__support">
+        Currently supported adapters include:
+      </p>
+      <div class="adapters__list">
+        <ul>
+          <li>Alexa</li>
+          <li>Discord</li>
+          <li>Email</li>
+          <li>Slack</li>
+          <li>SMS</li>
+          <li>Terminal</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Skillsets -->
+    <section id="skillsets">
+      <h1>Skillsets</h1>
+      <p>
+        Ready to use now on any bot instances are a group of skills built to meet common desirable use cases.
+      </p>
+      <p class="skillsets__support">
+        Currently we have built:
+      </p>
+      <dl>
+        <dt>Basic skill</dt>
+        <dd>Greetings and goodbyes, time and date, on and off.</dd>
+        <dt>Announcement skill</dt>
+        <dd>Post content to multiple services simultaneously and use reminders</dd>
+        <dt>Fact skill</dt>
+        <dd>Ask for very specific facts (example is on planets)</dd>
+        <dt>Resource skill</dt>
+        <dd>CRUDL functionality for specified resource/s (example is on gardening)</dd>
+        <dt>Story skill</dt>
+        <dd>Tell an interactive story (example is basic RPG)</dd>
+        <dt>Store skill</dt>
+        <dd>Purchase virtual or real products/services (example is bar and clothing store)</dd>
+        <dt>IOT skill</dt>
+        <dd>Interact with a basic arduino component</dd>
+    </section>
+    <!-- Persona -->
+    <section id="persona">
+      <h1>Personality</h1>
+      <p>
+        Choose from different personalities or create your own by tweaking an existing one.
+      </p>
+      <p class="persona__support">
+        Made from relatively well known AI instances of the past, remade for the current era.
+      </p>
+      <div class="persona__list">
+        <ul>
+          <li>Paper clip (Clippy)</li>
+          <li>Butler (Ask Jeeves)</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Languages -->
+    <section id="languages">
+      <h1>Languages</h1>
+      <p>
+        Support any language in existence to target a local or worldwide audience.
+      </p>
+      <p>
+        For novelty purposes even target ones that are very niche or fictional.
+      </p>
+      <h3 class="languages__support">Currently supported languages:</h3>
+      <div class="languages__list">
+        <ul>
+          <li>English (en_GB)</li>
+          <li>Japanese (ja_JP)</li>
+        </ul>
+      </div>
+      <p>
+        Feel free to contribute if you want to diversify what is on offer.
+      </p>
+    </section>
+    <!-- Live demo  -->
+    <section id="demo">
+      <h1>Examples/Demo</h1>
+      <p>
+        LIVE DEMO TIME: Now to see the bot in action!
+      </p>
+    </section>
+    <!-- Repos -->
+    <section id="repos">
+      <h1>Repositories</h1>
+      <p>
+        25+ repositories related to the different aspects of bot development
+      </p>
+      <table>
+
+      </table>
+    </section>
+    <!-- Contributing -->
+    <section id="contributing">
+      <h1>Contributing/Taking part</h1>
+      <div class="qr"></div>
+      <p>
+        Bot framework group on meetup (<a href="#">meetup.com</a>)
+      </p>
+      <p>
+        Just search ‘Bot framework development’, meet every 2-3 weeks in Leeds city centre
+      </p>
+      <p>
+        All code is open source, contributors needed and welcome (I’m the only person coding this at the moment).
+      </p>
+    </section>
+    <!-- Outro -->
+    <section id="outro">
+      <h1>Wrapping up</h1>
+      <p>
+        Any questions now? Feel free to ask.
+      </p>
+      <p>
+        Any questions at the end of the talks, feel free to find me and discuss.
+      </p>
+      <p>
+        Find me on <a href="#">Github</a> and <a href="#">Youtube</a>, Just search ‘Wade Penistone’
+        (You won’t find me on twitter, I don’t have one)
+      </p>
+    </section>
+  </div>
+</div>
+<script src="js/reveal.js"></script>
+<script>
+  Reveal.initialize();
+  Reveal.slide(5);
+</script>

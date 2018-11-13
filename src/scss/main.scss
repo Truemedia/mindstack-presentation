@@ -1,0 +1,105 @@
+/**
+* Vars
+*/
+$font-xl: 5rem;
+$font-lg: 4rem;
+$font-md: 3rem;
+$font-sm: 2rem;
+$font-xs: 1.5rem;
+$font-mc: 1rem;
+
+/**
+  * Overrides
+  */
+.reveal {
+  h1 {
+    font-size: $font-xl;
+  }
+  h2 {
+    font-size: $font-lg;
+  }
+  h3 {
+    font-size: $font-md;
+  }
+  ul {
+    li {
+      font-size: $font-sm;
+    }
+  }
+  dl {
+    dt, dd {
+      font-size: $font-sm;
+    }
+  }
+}
+
+/**
+  * Components
+  */
+ul.studies {
+  li {
+    font-size: $font-xs;
+    margin: 16px 0;
+
+    b {
+      color: slateblue;
+    }
+  }
+}
+.study__source {
+  color: cornflowerblue;
+  display: block;
+  text-decoration: underline;
+}
+.stat {
+  font-weight: bold;
+  border-radius: 16px;
+  color: white;
+  padding: 4px 8px !important;
+
+  &--pos {
+    background-color: green;
+  }
+  &--mid {
+    background-color: goldenrod;
+  }
+  &--neg {
+    background-color: red;
+  }
+}
+.key {
+  font-weight: bold;
+  text-decoration: underline;
+
+  &-detail {
+    color: seagreen;
+  }
+  &-issue {
+    color: red;
+  }
+}
+.service {
+  font-weight: bold !important;
+  padding: 2px 6px !important;
+
+  &--alexa {
+    background-color: orange;
+    color: white;
+  }
+  &--slack {
+    background-color: cyan;
+    color: black;
+  }
+}
+
+/**
+  * Slides
+  */
+@import './slides/intro',
+        './slides/cons',
+        './slides/solution',
+        './slides/architecture',
+        './slides/adapters',
+        './slides/skillsets',
+        './slides/persona',
+        './slides/languages';

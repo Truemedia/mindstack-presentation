@@ -1,0 +1,11 @@
+#cons {
+  dl {
+    dt {
+      color: red;
+      text-decoration: underline;
+    }
+    dt, dd {
+      font-size: $font-mc;
+    }
+  }
+}

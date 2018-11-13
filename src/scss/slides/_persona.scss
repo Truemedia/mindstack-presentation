@@ -1,0 +1,10 @@
+#persona {
+  .persona {
+    &__support, &__list {
+      text-align: left;
+    }
+    &__support {
+      font-size: $font-xs;
+    }
+  }
+}

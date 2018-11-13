@@ -1,0 +1,20 @@
+{
+  "name": "botslides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.0.12",
+    "jstransformer-handlebars": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "metalsmith-layouts": "^2.3.0",
+    "metalsmith-markdown": "^1.1.0",
+    "metalsmith-permalinks": "^2.0.0",
+    "metalsmith-sass": "^1.5.1"
+  }
+}

@@ -1,0 +1,11 @@
+#skillsets {
+  .skillsets__support {
+    font-size: $font-xs;
+    text-align: left;
+  }
+  dl {
+    dt, dd {
+      font-size: $font-mc;
+    }
+  }
+}
