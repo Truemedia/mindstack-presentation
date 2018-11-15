@@ -2,10 +2,12 @@
   dl {
     dt {
       color: red;
-      text-decoration: underline;
     }
     dt, dd {
       font-size: $font-mc;
+    }
+    dd {
+      margin-bottom: 2px;
     }
   }
 }

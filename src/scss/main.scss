@@ -90,9 +90,28 @@ ul.studies {
     background-color: #734DBA;
     color: white;
   }
+  &--email {
+    background-color: white;
+    color: black;
+  }
   &--slack {
     background-color: cyan;
     color: black;
+  }
+  &--sms {
+    background-color: lightgreen;
+    color: black;
+  }
+  &--terminal {
+    background-color: black;
+    color: lightgrey;
+  }
+}
+.code-block {
+  display: inline-block;
+  pre {
+    margin-left: 16px;
+    width: 100%;
   }
 }
 

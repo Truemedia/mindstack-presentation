@@ -1,7 +1,19 @@
 #adapters {
+  p {
+    font-size: $font-xs;
+  }
   .adapters {
-    &__list, &__support {
+    &__list {
       text-align: left;
+      ul {
+        list-style-type: square;
+        width: 100%;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
   }
 }

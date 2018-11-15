@@ -1,7 +1,44 @@
 #skillsets {
-  .skillsets__support {
-    font-size: $font-xs;
-    text-align: left;
+  .skillsets{
+    &__support, &__list {
+      text-align: left;
+    }
+    &__list {
+      margin: 0;
+      width: 100%;
+      .code-block {
+        background-color: black;
+        color: lightgreen;
+        font-size: 1.2rem;
+        code {
+          padding: 10px;
+        }
+      }
+      dt {
+        font-style: italic;
+      }
+      dd {
+        background-color: white;
+        border-top: 1px solid black;
+        border-left: 2px solid red;
+        border-bottom: 3px solid cornflowerblue;
+        border-right: 1px solid grey;
+        color: black;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        padding: 2px 5px;
+
+        // &:before {
+        //   content: '"';
+        // }
+        // &:after {
+        //   content: '"';
+        // }
+      }
+    }
+    &__support {
+      font-size: $font-xs;
+    }
   }
   dl {
     dt, dd {

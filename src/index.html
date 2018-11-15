@@ -19,8 +19,8 @@ layout: layout.hbs
     </section>
     <!-- Stats voice -->
     <section id="stats_voice">
-      <h2>Why use/build</h2>
-      <h3>for voice assistants/smart speakers</h3>
+      <h2>Why use/build &nbsp;🛠</h2>
+      <h3>📢&nbsp; For voice assistants/smart speakers</h3>
       <ul class="studies">
         <li>
           <b>2017 study</b>
@@ -58,8 +58,8 @@ layout: layout.hbs
     </section>
     <!-- Stats chat -->
     <section id="stats_chat">
-      <h2>Why use/build</h2>
-      <h3>chatbots/AI tools</h3>
+      <h2>Why use/build &nbsp;🛠</h2>
+      <h3>💬&nbsp; For Chatbots/AI tools</h3>
       <ul class="studies">
         <li>
           <b>2017 study</b>
@@ -94,27 +94,27 @@ layout: layout.hbs
     <section id="cons">
       <h2>Why is a <span class="key-detail">new</span> framework solution needed?</h2>
       <dl>
-        <dt>MARKUP</dt>
+        <dt>📄&nbsp; MARKUP</dt>
         <dd>
           Speech assistants like <span class="service service--alexa">Alexa</span> use <span class="key-detail">SSML</span> with some custom tags where as text chat services like <span class="service service--slack">Slack</span> use custom <span class="key-detail">markdown</span>. There isn't any library currently to write a template that works for all and very few bot frameworks use templating libraries.
         </dd>
-        <dt>SERVICE API'S</dt>
+        <dt>📡&nbsp; SERVICE API'S</dt>
         <dd>
           There is <span class="key-issue">no consolidated API</span> for the services I want to use. Why write code more than once when it's doing the same thing on a different services?
         </dd>
-        <dt>UNINTELLIGENT</dt>
+        <dt>🤓&nbsp; UNINTELLIGENT</dt>
         <dd>
           Most chat bot architectures are still using conventions which are <span class="key-issue">outdated and clunky</span>, where as people want <span class="key-detail">natural conversations</span> with smart AI. Even voice assistants are lacking in terms of the leg work needed to recognise a wide spectrum of conversation scenarios which people would want to essentially to perform the same task.
         </dd>
-        <dt>LACK OF PERSONALITY</dt>
+        <dt>😎&nbsp; LACK OF PERSONALITY</dt>
         <dd>
           It's nice to have a conversation with something that seems somewhat <span class="key-detail">intelligent</span> and has a <span class="key-detail">personality</span> you can connect with on a personal level. <span class="key-issue">Generic and stale language</span> can make the experience boring and feel like a chore more than a nice thing to have.
         </dd>
-        <dt>STRUCTURE</dt>
+        <dt>🏛&nbsp; STRUCTURE</dt>
         <dd>
           Most framework or api options leave very little in terms of ideas on how to structure your application. <span class="key-issue">Improvising</span> in this area can be daunting and quickly come back to bite you if you opt for the wrong strategy which essentially becomes a game of luckily fishing for useful libraries to get one thing done in the only way you can think how.
         </dd>
-        <dt>AMOUNT OF CODE</dt>
+        <dt>🗄&nbsp; AMOUNT OF CODE</dt>
         <dd>
           To make any kind of skill with a reasonable amount of functionality and great user experience for multiple api's without a framework would be a massively daunting and time consuming experience. Why would you want that when <span class="key-detail">boilerplate</span> can save you from <span class="key-issue">spaghetti code</span> and hours of your life back?
         </dd>
@@ -145,92 +145,153 @@ layout: layout.hbs
     </section>
     <!-- Architecture -->
     <section id="architecture">
-      <h1>Architecture</h1>
+      <h1>🏯&nbsp; Architecture</h1>
       <dl>
-        <dt>Utterances</dt>
+        <dt>🗯&nbsp; Utterances</dt>
         <dd>
           <span class="key-detail">Phrases/sentences</span> to match user speech to an intent
         </dd>
-        <dt>Intent</dt>
+        <dt>💭&nbsp; Intent</dt>
         <dd>A <span class="key-detail">predefined action name</span> that the bot can act on (associated to utterance)</dd>
-        <dt>Slot</dt>
+        <dt>🎰&nbsp; Slot</dt>
         <dd>An extract of <span class="key-detail">santised information</span> derived inside an utterance</dd>
-        <dt>Lexicon</dt>
+        <dt>📘&nbsp; Lexicon</dt>
         <dd>Dictionary of <span class="key-detail">words/phrases</span> corresponding to meaning such a noun, verb, synonym, word groupings, etc</dd>
-        <dt>Resolvers</dt>
+        <dt>⏳&nbsp; Resolvers</dt>
         <dd>
           <span class="key-detail">Function/s</span> executed when an intent/intents have been recognised
         </dd>
-        <dt>Templates</dt>
+        <dt>📐&nbsp; Templates</dt>
         <dd>SSML, MD, HTML, Text files used for <span class="key-detail">templating</span> content in responses</dd>
-        <dt>Adapters</dt>
+        <dt>🔌&nbsp; Adapters</dt>
         <dd>
           Object used to <span class="key-detail">integrate bot into specific service/network</span>
           (eg <span class="service service--discord">Discord</span> <span class="service service--alexa">Alexa</span> <span class="service service--slack">Slack</span>)
         </dd>
-        <dt>Skillsets</dt>
+        <dt>🎼&nbsp; Skillsets</dt>
         <dd>
           Skills to give your bot <span class="key-detail">interactive functionality</span>
         </dd>
-        <dt>Persona</dt>
+        <dt>🎩&nbsp; Persona</dt>
         <dd>Object to dictate the <span class="key-detail">personality</span> of a bot, using descriptive parameters</dd>
-        <dt>Data services</dt>
+        <dt>📦&nbsp; Data services</dt>
         <dd>
           External services for providing <span class="key-detail">data and resources</span> inside intent handlers
         </dd>
-        <dt>POD service</dt>
+        <dt>🎫&nbsp; POD service</dt>
         <dd>
           Personal online datastore, A centralised service for grabbing <span class="key-detail">personal details</span> of someone from a shared datastore.
         </dd>
-        <dt>Env file</dt>
+        <dt>📜&nbsp; Env file</dt>
         <dd>
           Set <span class="key-detail">credentials/environment variables</span> for adapters, data services, and pod services
         </dd>
     </section>
     <!-- Adapters -->
     <section id="adapters">
-      <h1>Adapters</h1>
-      <p>
-        Adapters allow you to connect your bot to different services as a messaging/voice medium.
-      </p>
+      <h3>🔌&nbsp; Adapters</h3>
       <p class="adapters__support">
-        Currently supported adapters include:
+        Adapters allow you to connect your bot to different services as a messaging/voice medium.
+        Currently <span class="key-detail">supported adapters</span> include:
       </p>
       <div class="adapters__list">
         <ul>
-          <li>Alexa</li>
-          <li>Discord</li>
-          <li>Email</li>
-          <li>Slack</li>
-          <li>SMS</li>
-          <li>Terminal</li>
+          <li class="service service--alexa">
+            Alexa
+            <div class="code-block">
+              <pre>npm i -S lowbot-alexa</pre>
+            </div>
+          </li>
+          <li class="service service--discord">
+            Discord
+            <div class="code-block">
+              <pre>npm i -S lowbot-discord</pre>
+            </div>
+          </li>
+          <li class="service service--email">
+            Email
+            <div class="code-block">
+              <pre>npm i -S lowbot-mail</pre>
+            </div>
+          </li>
+          <li class="service service--slack">
+            Slack
+            <div class="code-block">
+              <pre>npm i -S lowbot-slack</pre>
+            </div>
+          </li>
+          <li class="service service--sms">
+            SMS
+            <div class="code-block">
+              <pre>npm i -S lowbot-sms</pre>
+            </div>
+          </li>
+          <li class="service service--terminal">
+            Terminal
+            <div class="code-block">
+              <pre>npm i -S lowbot-terminal</pre>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
     <!-- Skillsets -->
     <section id="skillsets">
-      <h1>Skillsets</h1>
-      <p>
-        Ready to use now on any bot instances are a group of skills built to meet common desirable use cases.
-      </p>
+      <h2>Skillsets</h2>
       <p class="skillsets__support">
-        Currently we have built:
+        Ready to use now on any bot instances are a group of skills built to meet common desirable use cases.
+        Currently we have <span class="key-detail">built</span>:
       </p>
-      <dl>
-        <dt>Basic skill</dt>
-        <dd>Greetings and goodbyes, time and date, on and off.</dd>
-        <dt>Announcement skill</dt>
-        <dd>Post content to multiple services simultaneously and use reminders</dd>
-        <dt>Fact skill</dt>
-        <dd>Ask for very specific facts (example is on planets)</dd>
-        <dt>Resource skill</dt>
-        <dd>CRUDL functionality for specified resource/s (example is on gardening)</dd>
-        <dt>Story skill</dt>
-        <dd>Tell an interactive story (example is basic RPG)</dd>
-        <dt>Store skill</dt>
-        <dd>Purchase virtual or real products/services (example is bar and clothing store)</dd>
-        <dt>IOT skill</dt>
-        <dd>Interact with a basic arduino component</dd>
+      <dl class="skillsets__list">
+        <dt>
+          Basic skill
+          <div class="code-block">
+            <code>npm i -S basic-skillset</code>
+          </div>
+        </dt>
+        <dd>⏰ Greetings and goodbyes, time and date, on and off.</dd>
+        <dt>
+          Announcement skill
+          <div class="code-block">
+            <code>npm i -S announcement-skillset</code>
+          </div>
+        </dt>
+        <dd>📢 Post content to multiple services simultaneously and use reminders</dd>
+        <dt>
+          Fact skill
+          <div class="code-block">
+            <code>npm i -S fact-skillset</code>
+          </div>
+        </dt>
+        <dd>💡 Ask for very specific facts (example is on planets)</dd>
+        <dt>
+          Resource skill
+          <div class="code-block">
+            <code>npm i -S resource-skillset</code>
+          </div>
+        </dt>
+        <dd>📚 CRUDL functionality for specified resource/s (example is on gardening)</dd>
+        <dt>
+          Story skill
+          <div class="code-block">
+            <code>npm i -S story-skillset</code>
+          </div>
+        </dt>
+        <dd>📖 Tell an interactive story (example is basic RPG)</dd>
+        <dt>
+          Store skill
+          <div class="code-block">
+            <code>npm i -S store-skillset</code>
+          </div>
+        </dt>
+        <dd>🛒 Purchase virtual or real products/services (example is bar and clothing store)</dd>
+        <dt>
+          IOT skill
+          <div class="code-block">
+            <code>npm i -S iot-skillset</code>
+          </div>
+        </dt>
+        <dd>🤖 Interact with a basic arduino component</dd>
     </section>
     <!-- Persona -->
     <section id="persona">
@@ -318,5 +379,5 @@ layout: layout.hbs
 <script src="js/reveal.js"></script>
 <script>
   Reveal.initialize();
-  Reveal.slide(6);
+  Reveal.slide(10);
 </script>

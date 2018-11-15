@@ -1,11 +1,21 @@
 #architecture {
+  .key-detail {
+    color: lightgreen;
+  }
   dl {
-    dt {
-      color: orange;
-      text-decoration: underline;
-    }
+    background-color: grey;
+    border: 5px dashed darkgrey;
+    border-radius: 5px;
+    padding: 10px;
+
     dt, dd {
       font-size: $font-mc;
+    }
+    dt {
+      color: orange;
+    }
+    dd {
+      color: white;
     }
   }
 }
