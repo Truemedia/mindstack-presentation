@@ -1,4 +1,15 @@
 #solution {
+  .solution {
+    &__name {
+      background-color: white;
+    }
+    &__links {
+      text-align: left;
+      span {
+        padding: 0 12px;
+      }
+    }
+  }
   ul li {
     font-size: $font-xs;
   }

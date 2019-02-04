@@ -8,6 +8,13 @@ $font-sm: 2rem;
 $font-xs: 1.5rem;
 $font-mc: 1rem;
 
+$fuchsia: #F012BE;
+$lime: #01FF70;
+$orange: #FF851B;
+$purple: #B10DC9;
+$red: #FF4136;
+$yellow: #FFDC00;
+
 /**
   * Overrides
   */
@@ -106,6 +113,14 @@ ul.studies {
     background-color: black;
     color: lightgrey;
   }
+  &--github {
+    background-color: $purple;
+    color: white;
+  }
+  &--npm {
+    background-color: $red;
+    color: white;
+  }
 }
 .code-block {
   display: inline-block;
@@ -125,4 +140,5 @@ ul.studies {
         './slides/adapters',
         './slides/skillsets',
         './slides/persona',
-        './slides/languages';
+        './slides/languages',
+        './slides/demo';

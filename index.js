@@ -2,11 +2,12 @@ var Metalsmith  = require('metalsmith');
 var markdown    = require('metalsmith-markdown');
 var layouts     = require('metalsmith-layouts');
 var permalinks  = require('metalsmith-permalinks');
+var metallic = require('metalsmith-metallic');
 var sass = require('metalsmith-sass');
 
 Metalsmith(__dirname)
   .metadata({
-    title: 'Lowbot - First prototype presentation',
+    title: 'Mindstack - First prototype presentation',
     description: "Description",
     generator: "Metalsmith",
     // Contact details
@@ -26,6 +27,7 @@ Metalsmith(__dirname)
     outputStyle: "expanded",
     outputDir: 'css/'
   }))
+  // .use(metallic())
   .build(function(err, files) {
     if (err) { throw err; }
   });

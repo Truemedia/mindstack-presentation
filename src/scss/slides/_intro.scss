@@ -1,15 +1,41 @@
 #intro {
+  .main-title {
+    background-color: $orange;
+    color: white;
+    margin-bottom: 0;
+  }
   .slogan {
     background-color: orange;
     color: white;
+    font-size: 2rem;
+    word-spacing: 0.5rem;
+    .for {
+      color: black;
+      &--assistant, &--bot {
+        color: $yellow;
+      }
+    }
   }
-  .author, .project {
+  .author {
+    font-size: 2rem;
     text-align: left;
   }
+  .project {
+    background-color: white;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10%;
+    padding: 16px;
+    text-align: center;
+    width: auto;
+  }
   .project__name {
-    color: orange;
+    color: $orange;
   }
   .job-title {
-    color: rebeccapurple;
+    color: $purple;
+  }
+  .company-name {
+    color: $red;
   }
 }

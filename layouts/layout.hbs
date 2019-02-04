@@ -8,6 +8,23 @@
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/sky.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', () => {
+    let adaptersEl = '[data-vm="adapters"]';
+    if (document.querySelector(adaptersEl)) {
+      new Vue({
+        el: adaptersEl,
+        data() {
+          return {
+            adapter: null,
+            adapters: ['alexa', 'discord', 'email', 'slack', 'sms', 'terminal']
+          };
+        }
+      });
+    }
+    });
+    </script>
   </head>
   <body>
 		{{{ contents }}}

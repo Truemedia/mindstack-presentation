@@ -5,16 +5,21 @@ layout: layout.hbs
   <div class="slides">
     <!-- Intro -->
     <section id="intro">
-      <h2 class="slogan">A bot framework for digital assistants and chatbots</h2>
-      <h3 class="author">Wade Penistone</h3>
-      <p>
-        <span class="job-title">PHP developer</span> (technically full stack) at <br /><b>Tribus Digital</b>
-      </p>
+      <h2 class="main-title">
+        Bot framework
+      </h2>
+      <h3 class="slogan">
+        <span class="for">for</span> <span class="for--assistant">digital assistants</span> & <span class="for--bot">chatbots</span>
+      </h3>
+      <h3 class="author">
+        Wade Penistone<br />
+        <span class="job-title">Web developer</span> at <b class="company-name">Tribus Digital</b>
+      </h3>
       <h3 class="project">
-        Project: <span class="project__name">Lowbot</span>
+        Project: <span class="project__name">Mindstack</span>
       </h3>
       <p>
-        A low implementation bot framework for building bots without restrictions
+        A powerful and flexible bot framework for building bots without restrictions
       </p>
     </section>
     <!-- Stats voice -->
@@ -123,72 +128,81 @@ layout: layout.hbs
     <!-- Solution -->
     <section id="solution">
       <h2>Solution?</h2>
-      <h3>New bot framework</h3>
-      <h4>Lowbot: low implementation bot</h4>
+      <h4 class="solution__name">
+        <b>Mindstack</b>: A powerful and flexible bot framework for building bots without restrictions
+      </h4>
       <div class="qr"></div>
-      <a href="https://github.com/Truemedia/lowbot">
-        https://github.com/Truemedia/lowbot
-      </a>
-      <br /><br />
+      <div class="solution__links">
+        <span class="service--github">Github - Truemedia/mindstack</span>
+        <span class="service--npm">NPM - mindstack</span>
+      </div>
+      <br />
       <ul>
-        <li>Project was started on October 14th 2018 (<span class="key-detail">Just 2 months ago</span>)</li>
+        <li>Project was started on October 14th 2018 (<span class="key-detail">Just late last year</span>)</li>
         <li>
-          <span class="stat stat--pos">< 13kb</span> in size when installed
+          <span class="stat stat--pos">< 50mb</span> in size when installed
         </li>
         <li>Can build a bot in <span class="stat stat--pos">< 20</span> lines of code (*.js)</li>
         <li>Example code, adapters, and skills easy to find and add</li>
         <li>
           <span class="key-detail">Generator/s</span> available</li>
-        <li>
-          <span class="key-detail">Tests</span> fully implemented</li>
+        <li style="text-decoration: line-through; color: red;">
+          <span>Tests</span> fully implemented</li>
       </ul>
     </section>
     <!-- Architecture -->
     <section id="architecture">
       <h1>🏯&nbsp; Architecture</h1>
       <dl>
-        <dt>🗯&nbsp; Utterances</dt>
+        <dt>🔌&nbsp; Adapters</dt>
         <dd>
-          <span class="key-detail">Phrases/sentences</span> to match user speech to an intent
+          Third party packages to <span class="key-detail">integrate bot into specific service/network</span>
+          (eg <span class="service service--discord">Discord</span> <span class="service service--alexa">Alexa</span> <span class="service service--slack">Slack</span>)
+        </dd>
+        <dt>📦&nbsp; Data service</dt>
+        <dd>
+          External service for providing <span class="key-detail">data and resources</span> inside intent handlers using GraphQL client. Presets for Gatsby (React powered) and Gridsome (Vue powered) available.
+        </dd>
+        <dt>👨‍💻&nbsp; Human interfaces</dt>
+        <dd>
+          Support texting, speech (alexa only currently), <span style="color: red; text-decoration: line-through;">and visual prompts</span> via
+          <span style="color: red; text-decoration: line-through;">CVA (Computer vision algorithms),</span> NLU (Natural language understanding), and SRL (Speech recognition layer)
         </dd>
         <dt>💭&nbsp; Intent</dt>
-        <dd>A <span class="key-detail">predefined action name</span> that the bot can act on (associated to utterance)</dd>
-        <dt>🎰&nbsp; Slot</dt>
-        <dd>An extract of <span class="key-detail">santised information</span> derived inside an utterance</dd>
+        <dd>
+          A <span class="key-detail">predefined action name</span> that the bot can act on (associated to utterance)
+        </dd>
         <dt>📘&nbsp; Lexicon</dt>
         <dd>Dictionary of <span class="key-detail">words/phrases</span> corresponding to meaning such a noun, verb, synonym, word groupings, etc</dd>
+        <dt>🎩&nbsp; Persona</dt>
+        <dd>JSON Object to dictate the <span class="key-detail">personality</span> of a bot, using descriptive parameters for interfacing/styling/tweaks</dd>
         <dt>⏳&nbsp; Resolvers</dt>
         <dd>
           <span class="key-detail">Function/s</span> executed when an intent/intents have been recognised
         </dd>
-        <dt>📐&nbsp; Templates</dt>
-        <dd>SSML, MD, HTML, Text files used for <span class="key-detail">templating</span> content in responses</dd>
-        <dt>🔌&nbsp; Adapters</dt>
-        <dd>
-          Object used to <span class="key-detail">integrate bot into specific service/network</span>
-          (eg <span class="service service--discord">Discord</span> <span class="service service--alexa">Alexa</span> <span class="service service--slack">Slack</span>)
-        </dd>
         <dt>🎼&nbsp; Skillsets</dt>
         <dd>
-          Skills to give your bot <span class="key-detail">interactive functionality</span>
+          Independant packages to give your bot specialised <span class="key-detail">interactive functionality</span> (Think apps for AI)
         </dd>
-        <dt>🎩&nbsp; Persona</dt>
-        <dd>Object to dictate the <span class="key-detail">personality</span> of a bot, using descriptive parameters</dd>
-        <dt>📦&nbsp; Data services</dt>
+        <dt>🎰&nbsp; Slot</dt>
+        <dd>An extract of <span class="key-detail">dynamic santised information</span> derived inside an utterance</dd>
+        <dt>📐&nbsp; Templates</dt>
+        <dd>Template files (pick your poison from template engines supported by JSTransformer) used for <span class="key-detail">templating</span> content in responses</dd>
+        <dt>🗯&nbsp; Utterances</dt>
         <dd>
-          External services for providing <span class="key-detail">data and resources</span> inside intent handlers
+          <span class="key-detail">Phrases/sentences</span> to match user speech to an intent (using *.utter files)
         </dd>
-        <dt>🎫&nbsp; POD service</dt>
+        <!-- <dt>🎫&nbsp; POD service</dt>
         <dd>
           Personal online datastore, A centralised service for grabbing <span class="key-detail">personal details</span> of someone from a shared datastore.
-        </dd>
-        <dt>📜&nbsp; Env file</dt>
+        </dd> -->
+        <!-- <dt>📜&nbsp; Env file</dt>
         <dd>
           Set <span class="key-detail">credentials/environment variables</span> for adapters, data services, and pod services
-        </dd>
+        </dd> -->
     </section>
     <!-- Adapters -->
-    <section id="adapters">
+    <section id="adapters" data-vm="adapters">
       <h3>🔌&nbsp; Adapters</h3>
       <p class="adapters__support">
         Adapters allow you to connect your bot to different services as a messaging/voice medium.
@@ -196,13 +210,22 @@ layout: layout.hbs
       </p>
       <div class="adapters__list">
         <ul>
-          <li class="service service--alexa">
-            Alexa
+          <li v-for="adapterName in adapters"
+              class="service" :class="`service--${adapterName}`"
+              @mouseover="adapter = adapterName" @mouseout="adapter = null">
+            <span v-if="adapter != adapterName" style="text-transform: capitalize;">{{ adapterName }}</span>
             <div class="code-block">
-              <pre>npm i -S lowbot-alexa</pre>
+              <pre v-if="adapter == adapterName"><!-- Usage -->
+                const {{ adapterName }} = require('lowbot-{{ adapterName }}');
+
+                botInstance.useAdapter({{ adapterName }});
+              </pre>
+              <pre v-else><!-- Install -->
+                npm i -S lowbot-{{ adapterName }}
+              </pre>
             </div>
           </li>
-          <li class="service service--discord">
+          <!-- <li class="service service--discord">
             Discord
             <div class="code-block">
               <pre>npm i -S lowbot-discord</pre>
@@ -231,7 +254,7 @@ layout: layout.hbs
             <div class="code-block">
               <pre>npm i -S lowbot-terminal</pre>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
     </section>
@@ -311,7 +334,7 @@ layout: layout.hbs
     </section>
     <!-- Languages -->
     <section id="languages">
-      <h1>Languages</h1>
+      <h1>🏳️&nbsp; Languages</h1>
       <p>
         Support any language in existence to target a local or worldwide audience.
       </p>
@@ -321,17 +344,22 @@ layout: layout.hbs
       <h3 class="languages__support">Currently supported languages:</h3>
       <div class="languages__list">
         <ul>
-          <li>English (en_GB)</li>
-          <li>Japanese (ja_JP)</li>
+          <li>
+            🇬🇧 English/en_GB - Hello
+          </li>
+          <li>
+            🇯🇵 Japanese/ja_JP - こんにちは
+          </li>
         </ul>
       </div>
       <p>
-        Feel free to contribute if you want to diversify what is on offer.
+        Feel free to contribute if you want to diversify what is on offer<br />
+        🇫🇷🇩🇪🇫🇮🇧🇪🇪🇸
       </p>
     </section>
     <!-- Live demo  -->
     <section id="demo">
-      <h1>Examples/Demo</h1>
+      <h1>🕹&nbsp; Examples/Demo</h1>
       <p>
         LIVE DEMO TIME: Now to see the bot in action!
       </p>
@@ -342,9 +370,17 @@ layout: layout.hbs
       <p>
         25+ repositories related to the different aspects of bot development
       </p>
-      <table>
-
-      </table>
+      <details>
+        <summary>🔌 Adapters</summary>
+        <dl>
+          <dt>
+            <a href="https://www.npmjs.com/package/lowbot-alexa">Alexa</a>
+          </dt>
+          <dd>
+            <p>Alexa adapter for lowbot</p>
+          </dd>
+        </dl>
+      </details>
     </section>
     <!-- Contributing -->
     <section id="contributing">
@@ -379,5 +415,5 @@ layout: layout.hbs
 <script src="js/reveal.js"></script>
 <script>
   Reveal.initialize();
-  Reveal.slide(10);
+  Reveal.slide(7);
 </script>
