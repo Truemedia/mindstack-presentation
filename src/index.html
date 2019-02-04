@@ -140,7 +140,7 @@ layout: layout.hbs
       <ul>
         <li>Project was started on October 14th 2018 (<span class="key-detail">Just late last year</span>)</li>
         <li>
-          <span class="stat stat--pos">< 50mb</span> in size when installed
+          <span class="stat stat--pos">< 100mb</span> in size when installed
         </li>
         <li>Can build a bot in <span class="stat stat--pos">< 20</span> lines of code (*.js)</li>
         <li>Example code, adapters, and skills easy to find and add</li>
@@ -216,12 +216,12 @@ layout: layout.hbs
             <span v-if="adapter != adapterName" style="text-transform: capitalize;">{{ adapterName }}</span>
             <div class="code-block">
               <pre v-if="adapter == adapterName"><!-- Usage -->
-                const {{ adapterName }} = require('lowbot-{{ adapterName }}');
+                const {{ adapterName }} = require('mindstack-{{ adapterName }}');
 
                 botInstance.useAdapter({{ adapterName }});
               </pre>
               <pre v-else><!-- Install -->
-                npm i -S lowbot-{{ adapterName }}
+                npm i -S mindstack-{{ adapterName }}
               </pre>
             </div>
           </li>
@@ -280,7 +280,7 @@ layout: layout.hbs
           </div>
         </dt>
         <dd>📢 Post content to multiple services simultaneously and use reminders</dd>
-        <dt>
+        <!-- <dt>
           Fact skill
           <div class="code-block">
             <code>npm i -S fact-skillset</code>
@@ -314,10 +314,10 @@ layout: layout.hbs
             <code>npm i -S iot-skillset</code>
           </div>
         </dt>
-        <dd>🤖 Interact with a basic arduino component</dd>
+        <dd>🤖 Interact with a basic arduino component</dd> -->
     </section>
     <!-- Persona -->
-    <section id="persona">
+    <!-- <section id="persona">
       <h1>Personality</h1>
       <p>
         Choose from different personalities or create your own by tweaking an existing one.
@@ -331,7 +331,7 @@ layout: layout.hbs
           <li>Butler (Ask Jeeves)</li>
         </ul>
       </div>
-    </section>
+    </section> -->
     <!-- Languages -->
     <section id="languages">
       <h1>🏳️&nbsp; Languages</h1>
@@ -367,20 +367,9 @@ layout: layout.hbs
     <!-- Repos -->
     <section id="repos">
       <h1>Repositories</h1>
-      <p>
-        25+ repositories related to the different aspects of bot development
-      </p>
-      <details>
-        <summary>🔌 Adapters</summary>
-        <dl>
-          <dt>
-            <a href="https://www.npmjs.com/package/lowbot-alexa">Alexa</a>
-          </dt>
-          <dd>
-            <p>Alexa adapter for lowbot</p>
-          </dd>
-        </dl>
-      </details>
+      <a href="#">
+        See list of repositories that directly power this project using this link
+      </a>
     </section>
     <!-- Contributing -->
     <section id="contributing">
@@ -406,8 +395,8 @@ layout: layout.hbs
         Any questions at the end of the talks, feel free to find me and discuss.
       </p>
       <p>
-        Find me on <a href="#">Github</a> and <a href="#">Youtube</a>, Just search ‘Wade Penistone’
-        (You won’t find me on twitter, I don’t have one)
+        Any other time find me on <a href="#">Github</a>, <a href="#">Twitter</a>, and <a href="#">Youtube</a>
+        <br /> Just search my name <b>Wade Penistone</b>
       </p>
     </section>
   </div>
@@ -415,5 +404,5 @@ layout: layout.hbs
 <script src="js/reveal.js"></script>
 <script>
   Reveal.initialize();
-  Reveal.slide(7);
+  Reveal.slide(0);
 </script>
